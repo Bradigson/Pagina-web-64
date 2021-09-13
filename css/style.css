@@ -1,0 +1,288 @@
+body{
+    overflow-x:hidden;
+}
+header{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    padding:40px 100px;
+    z-index:100;
+    transition:all 1s linear;
+}
+header.sticky{
+    padding:5px 100px;
+    background:#262626;
+}
+header.sticky nav ul li a{
+    color:#eee;
+}
+header.sticky nav ul li a::before{
+    background:#eee;
+}
+nav{
+    padding-top:13px;
+}
+nav ul {
+ 
+    display:flex;
+    justify-content:space-around;
+}
+nav ul li {
+    list-style:none;
+}
+nav ul li a{
+    text-decoration:none;
+    box-sizing:border-box;
+    transition:all 0.5s;
+    letter-spacing:2px;
+    font-size:20px;
+    color:#262626;
+    transition:all 1s linear;
+}
+nav ul li a:before{
+    content:"";
+    display:block;
+    background:#000;
+    width:0px;
+    height:3px;
+    position:absolute;
+    margin-top:30px;
+    border-radius:200px;
+    transition:all 0.6s;
+    opacity:0;
+    
+}
+nav ul li a:hover::before{
+    width:70px;
+    opacity:unset;
+}
+
+/*section one*/
+.sesion1{
+    background:url(../imgs/FOREST_BACKGROUND6_generated.jpg);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.sesion1__content > h1{
+    font-size:125px;
+    color:#eee;
+    filter:drop-shadow(1px 7px 15px rgba(0,0,0));
+}
+/*sun*/
+.bxs-circle{
+
+    position:absolute;
+    font-size:125px;
+    top:70px;
+    left:330px;
+    color:#fff;
+    text-shadow:0 0 15px #fbfb24,
+    0 0 30px #fbfb24,
+    0 0 45px #fbfb24,
+    0 0 60px #fbfb24;
+    opacity:.7;
+}
+
+/*birds*/
+#bird1, #bird2, #bird3{
+    position:absolute;
+    width:200px;
+}
+#bird1{
+
+    right:70px;
+    top:200px;
+    width:150px;
+    opacity:.7;
+}
+#bird3{
+    opacity:.8;
+    width:150px;
+    top:150px;
+    left:150px;
+}
+#bird2{
+    
+    margin-top:200px;
+    margin-left:100px;
+    opacity:.8;
+}
+::-webkit-scrollbar{
+    width:8px;
+    background:rgb(110, 108, 108);
+}
+::-webkit-scrollbar-thumb{
+    background:rgb(226, 224, 224);
+    border-radius:50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:rgb(255, 255, 255);
+}
+
+/*section two*/
+
+
+.sesion2__artile2{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.2)),url(../imgs/mountain_landscape26_generated.jpg);
+    background-size:cover;
+
+    height:100vh;
+}
+.info{
+    width:55%;
+    color:#eee;
+    padding:80px 10px 0px 20px;
+    text-shadow:1px 2px 1px rgba(0,0,0);
+    font-size:18px;
+    position:absolute;
+}
+#montain1{
+    position:absolute;
+    width:500px;
+    right:50px;
+    margin-top:190px;
+}
+.animado{
+    opacity:0;
+}
+.down{
+    animation:down 1s linear;
+}
+@keyframes down{
+    0%{
+        transform:translateY(100px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+
+
+
+/*article two*/
+.sesion2__article2{
+    background:url(../imgs/mountain_landscape22_generated.jpg);
+    background-size:cover;
+    height:100vh;
+    position:relative;
+    overflow-x:hidden ;
+}
+.artile2__content{
+    color:#eee;
+    width:50%;
+    background:rgba(0,0,0,.1);
+    backdrop-filter:blur(10px);
+    padding:95px 20px 0px 20px;
+    height:100%;
+    position:relative;
+}
+/*efecto scroll*/
+.efecto{
+
+    left:-300px;
+    opacity:0;
+
+}
+.artile2__content > p{
+    font-size:20px;
+}
+.artile2__content > h2{
+    font-size:80px;
+    margin-left:400px;
+    filter:drop-shadow(1px 7px 5px rgba(0,0,0,.4));
+}
+#article2__img{
+    position:absolute;
+    width:550px;
+    margin-top:200px;
+    z-index:50;
+}
+
+/*efeto scroll*/
+.efectoright{
+    opacity:0;
+    right:-100px;
+
+}
+
+/*article three*/
+.sesion2__article3{
+    background:url(../imgs/mountain_landscape7_generated.jpg);
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    overflow-x:hidden;
+
+}
+.article3__ontent{
+    width:50%;
+    height:50%;
+    background:rgba(255,255,255);
+    margin-left:50px;
+    padding:40px 15px 10px 15px;
+    border-radius:20px;
+    position:relative;
+    z-index: 30;
+
+}
+#rock{
+    position:absolute;
+    right:150px;
+    width:300px;
+    margin-top:-80px;
+    animation:rock 10s infinite linear alternate;
+
+}
+@keyframes rock{
+    0%{
+        transform:translateY(120px) rotate(360deg);
+        
+    }
+}
+
+/*footer*/
+footer{
+    height:40vh;
+}
+.footer__content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    justify-content:space-around;
+    height:100%;
+    width:100%;
+}
+
+.footer__content ul{
+    padding:10px 20px;
+}
+.footer__content ul li{
+    list-style:none;
+}
+.footer__content ul li > a{
+    text-decoration:none;
+    color:#fff;
+    font-size:20px;
+    
+}
+.footer__content ul li a::before{
+    content:"";
+    display:block;
+    background:#eee;
+    width:0px;
+    height:2px;
+    position:relative;
+    bottom:-30px;
+    border-radius:100px;  
+    opacity:0px;
+    transition:all 1s;
+}
+.footer__content ul li a:hover::before{
+    opacity:unset;
+    width:52px;
+}
